@@ -1,0 +1,95 @@
+// // .venia-logo{
+// //     top: 16px;
+// //     left: 277px;
+// //     width: 112px;
+// //     height: 48px;
+// //     /* UI Properties */
+// //     background: #FFFFFF 0% 0% no-repeat padding-box;
+// //     opacity: 1;
+// //     float: left;
+// // }
+// // .navbar{
+// //     width: 362px;
+// // }
+
+// // .navbar ul {
+// //     opacity: 1;
+// //     list-style-type: none;
+// //   }
+
+// // .navbar li{
+// //     float: left;
+// //     left: 780px;
+// //     width: 59px;
+// //     height: 20px;
+// // /* UI Properties */
+// // font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+// // letter-spacing: var(--unnamed-character-spacing-0);
+// // text-align: left;
+// // font: normal normal 600 16px/24px Muli;
+// // letter-spacing: 0px;
+// // color: #1B252C;
+// // opacity: 1;
+// // }  
+
+
+// // .search-btn{
+// //     top: 30px;
+// //     left: 1424px;
+// //     width: 52px;
+// //     height: 20px;
+// //     /* UI Properties */
+// //     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-muli);
+// //     letter-spacing: var(--unnamed-character-spacing-0);
+// //     text-align: right;
+// //     font: normal normal 600 16px/24px Muli;
+// //     letter-spacing: 0px;
+// //     color: #1B252C;
+// //     opacity: 1;
+// // }
+
+
+// .max-width_header{
+//     // width: 1440px;
+//     width: 1200px;
+//     margin: 0 auto;
+//     // background: transparent url('images/max-width_header.svg') 0% 0% no-repeat padding-box;
+// }
+// .venia-logo{
+//     width: 312px;
+//     background: #FFFFFF 0% 0% no-repeat padding-box;
+//     opacity: 1;
+//     float: left;
+//     font-size: 36px;
+// }
+
+// .navbar{
+//     display: inline-grid;
+// }
+// .navbar ul li{
+//     float: left;
+//     width: 100px;
+// }
+
+
+
+
+.max-width_header{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+
+.user-accounts{
+    float: right;
+}
+
+
+ul{
+    list-style-type: none;
+}
+.navbar li{
+    float: left;
+    width: 100px;
+}

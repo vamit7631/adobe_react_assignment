@@ -1,0 +1,19 @@
+.max-width_header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.user-accounts {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  float: left;
+  width: 100px;
+}
+/*# sourceMappingURL=header.css.map */
