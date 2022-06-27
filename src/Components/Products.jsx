@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../Styles/products.css';
-import '../Styles/aem-grid.css'
 import { getAllProducts } from '../Services/productServices';
 import { Link } from 'react-router-dom';
 const Products = () => {
@@ -50,16 +49,7 @@ const Products = () => {
     const ShowProducts = () => {
         return (
             <>
-                <div class="category-banner">
-                    <div class="rectangle-banner">
-                        <div class="women-outerwear">
-                            <span>Women's</span>
-                        </div>
-                        <div>
-                            
-                        </div>
-                    </div>
-                </div>
+
                 <div>
                     <div>
                         <ul class="breadcrumb">

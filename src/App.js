@@ -6,6 +6,8 @@ import Products from './Components/Products';
 import {Routes, Route} from "react-router-dom";
 import Product from './Components/Product';
 import Cart from './Components/Cart';
+import './Styles/aemGrid/aem-grid.css';
+import './Styles/common/main.css';
 
 function App() {
   return (

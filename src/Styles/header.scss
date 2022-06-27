@@ -1,13 +1,4 @@
-// // .venia-logo{
-// //     top: 16px;
-// //     left: 277px;
-// //     width: 112px;
-// //     height: 48px;
-// //     /* UI Properties */
-// //     background: #FFFFFF 0% 0% no-repeat padding-box;
-// //     opacity: 1;
-// //     float: left;
-// // }
+
 // // .navbar{
 // //     width: 362px;
 // // }
@@ -75,21 +66,72 @@
 
 
 .max-width_header{
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 14px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
 }
-
-
-.user-accounts{
-    float: right;
-}
-
 
 ul{
     list-style-type: none;
 }
+
+.navigation{
+    margin-top: 15px;
+
+    .navbar{
+        display: table !important;
+        margin: 0 auto;
+    }
+}
+
+
 .navbar li{
     float: left;
     width: 100px;
+}
+
+.venia-logo{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-size: 36px;
+
+    img{
+        width: 100%;
+    }
+}
+
+.header-socials{
+    margin-top: 15px;
+    padding-top: 15px !important;
+}
+.search-btn{
+    float: left;
+    margin-right: 25px;
+    img{  
+        width: 25px;
+        padding-right: 10px;
+        vertical-align: bottom;
+    }
+}
+
+.signin-btn{
+    float: left;
+    margin-right: 25px;
+    img{
+        width:25px;
+        padding-right: 10px;
+        vertical-align: bottom;
+    }
+}
+
+.cart-btn{
+    float: left;
+    margin-right: 25px;
+    img{
+        width:25px;
+        padding-right: 10px;
+        vertical-align: bottom;
+    }
+    span{
+        display: none;
+    }
 }
