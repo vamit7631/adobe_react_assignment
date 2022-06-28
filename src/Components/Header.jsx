@@ -10,7 +10,8 @@ function Header() {
                 <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
                         <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
                             <div class="venia-logo"> <Link to="/"> <img 
-          alt="user's image" src={'images/venia_logo.png'} /></Link></div>
+                            src={'../images/venia_logo.png'} />
+                        </Link></div>
                         </div>
                         <div class="navigation aem-GridColumn aem-GridColumn--default--7">
                             <nav class="navbar nav">
@@ -25,11 +26,11 @@ function Header() {
                     
                     <div class="header-socials aem-GridColumn aem-GridColumn--default--3">
                         <div class="search-btn"><img 
-          alt="user's image" src={'images/search.svg'} /><span>Search</span></div>
+           src={'../images/search.svg'} /><span>Search</span></div>
                         <div class="signin-btn"><img 
-          alt="user's image" src={'images/user.svg'} /><span>Sign in</span></div>
+           src={'../images/user.svg'} /><span>Sign in</span></div>
                         <div class="cart-btn"> <Link to="/cart"> <img 
-          alt="user's image" src={'images/cart.png'} /><span>({state.length})</span></Link></div>
+           src={'../images/cart.png'} /><span>({state.length})</span></Link></div>
                     </div>  
             </div>
             </div>
