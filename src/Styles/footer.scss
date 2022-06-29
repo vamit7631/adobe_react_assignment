@@ -55,3 +55,23 @@
         }
     }
 }
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .footer-bottom-col{
+        padding: 0px;
+    }
+    .footer-items-details{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+    .footer-copyright{
+        margin-bottom: 25px;
+    }
+    .footer-col{
+        width: 100% !important;
+        ul{
+            padding: 0px;
+        }
+    }
+}

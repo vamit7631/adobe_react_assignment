@@ -8,8 +8,8 @@ const Footer = () => {
             <div class="aem-GridColumn aem-GridColumn--default--12">
             <div class="footer main-container">
                 <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-                    <div class="aem-Grid aem-Grid--4 aem-Grid--default--4">
-                        <div class="aem-GridColumn aem-GridColumn--default--1 footer-col footer-col1">
+                    <div class="aem-Grid aem-Grid--4 aem-Grid--default--4 aem-Grid--phone--12">
+                        <div class="aem-GridColumn aem-GridColumn--default--1 aem-Grid--phone--12 footer-col footer-col1">
                             <ul>
                                 <li class="footer-element"><a href="#"><strong>Account</strong></a></li>
                                 <li>Sign In</li>
@@ -59,15 +59,15 @@ const Footer = () => {
             </div>
             <div class="footer-bottom-col">
                 <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-                    <div class="aem-Grid aem-Grid--8 aem-Grid--default--4">
-                        <div class="aem-GridColumn aem-GridColumn--default--1">
+                    <div class="footer-items-details aem-Grid aem-Grid--8 aem-Grid--default--4 aem-Grid--phone--12">
+                        <div class="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--hide">
                         <div class="venia-logo"><img 
           alt="user's image" src={'../images/venia_logo.png'} /></div>
                         </div>
-                        <div class="aem-GridColumn aem-GridColumn--default--5 footer-copyright">
+                        <div class="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 footer-copyright">
                             <span>@Company Name Address Ave, City Name, State ZIP</span>  
                         </div>
-                        <div class="aem-GridColumn aem-GridColumn--default--2 footer-policy">
+                        <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--12 footer-policy">
                         <ul>
                             <li><a href="">Terms of Use</a></li>
                             <li><a href="">Privacy Policy</a></li>

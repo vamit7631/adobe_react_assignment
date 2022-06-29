@@ -50,49 +50,111 @@ const Products = () => {
         return (
             <>
 
-                <div>
-                    <div>
+                <div class="products-header-section aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
+                    <div class="breadcrumbs-section aem-GridColumn aem-GridColumn--default--6">
                         <ul class="breadcrumb">
-                            <li>Clothing</li>
-                            <li>Women's</li>
-                            <li>Outerwear</li>
+                            <li>Clothing <span>&nbsp;</span> </li>
+                            <li>Women's <span>&nbsp;</span></li>
+                            <li>Outerwear <span>&nbsp;</span></li>
                         </ul>
                     </div>
-                    <div>
-                    <label for="cars">Sort by </label>
-                    <select name="cars" id="cars">
-                        <option value="asc">Latest</option>
-                        <option value="desc">Price</option>
-                    </select>
+                    <div class="aem-GridColumn aem-GridColumn--default--6">
+                        <div class="product-sorting">
+                            <select name="products" id="products">
+                                <option value="asc">Sort by Latest</option>
+                                <option value="desc">Sort by Price</option>
+                            </select>
+                        </div>
+                   
                     </div>
                 </div>
                 
-                
-                <div className="aem-GridColumn aem-GridColumn--default--3">
-                    <button className='btn' type='submit' onClick={() => setFilter(data)}>All</button>
-                    <button className='btn' type='submit' onClick={() => filterProduct("men's clothing")}>Men's clothing</button>
-                    <button className='btn' type='submit' onClick={() => filterProduct("women's clothing")}>Women's clothing</button>
-                    <button className='btn' type='submit' onClick={() => filterProduct("jewelery")}>Jewelery</button>
-                    <button className='btn' type='submit' onClick={() => filterProduct("electronics")}>Electronics</button>
-                </div>
-                <div className="products-listing">
-                    <div class="aem-Grid aem-Grid--9">
+
+                <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12 aem-Grid--phone--12">
+                    <div class="category-product-filters aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
+                        <h4>Filters</h4>
+                        <div class="top-filters">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name='allitems' class='btn' defaultChecked={true} onChange={() => setFilter(data)} />
+                                <label for="allitems"> All</label><br></br>
+                            </li>
+                            <li>
+                                <input type="checkbox" name='mens_clothing' class='btn' onChange={() => filterProduct("men's clothing")} />
+                                <label for="mens_clothing"> Men's clothing</label><br></br>
+                            </li>
+                            <li>
+                                <input type="checkbox" name='womens_clothing' class='btn' onChecked={() => filterProduct("women's clothing")} />
+                                <label for="womens_clothing"> Women's clothing</label><br></br>
+                            </li>
+                            <li>
+                                <input type="checkbox" name='jewelery' class='btn' onChecked={() => filterProduct("jewelery")} />
+                                <label for="jewelery"> Jewelery</label><br></br>
+                            </li>
+                            <li>
+                                <input type="checkbox" name='electronics' class='btn' onChecked={() => filterProduct("electronics")} />
+                                <label for="electronics"> Electronics</label><br></br>
+                            </li>
+                        </ul>
+                        <div class="show-more"><a href="">Show more</a></div>
+                        </div>
+                        <div class="middle-filters">
+                            <h5>Attribute</h5>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class='btn'/>
+                                <label for="Option"> Option</label><br></br>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prdct-container aem-GridColumn aem-GridColumn--default--9 aem-Grid--phone--12">
+                    <div className="products-listing aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
                         {filter.map((product) => {
                             return(
                                 <>
-                                    
-                                        <div class="aem-GridColumn aem-GridColumn--default--3" key={product.id}>
-                                        <img class="product-img" src={product.image} alt={product.title} />
-                                        <div>
-                                            <h3 className="title">{product.title.substring(0, 15)}...</h3>
+                                    <div class="main-products aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={product.id}>
+                                        <Link to={`/products/${product.id}`} className='buyNow'>
+                                        <div class="category-product-outer">
+                                        <div class="category-product-img">
+                                            <img class="product-img" src={product.image} alt={product.title} />
+                                            </div>
+                                            <div>
+                                            <h3 className="category-product-title">{product.title.substring(0, 18)}...</h3>
                                             <div className="product-details">
-                                                <span>Rate: {product.rating.rate}</span>
-                                                <span>${product.price}</span>
+                                                {/* <span>Rate: {product.rating.rate}</span> */}
+                                                        <div>${product.price}</div>
+                                                        <span class="product-rating">&#9825;</span>
                                             </div>
                                         </div>
-                                        <div className="card-footer">
-                                            <Link to={`/products/${product.id}`} className='buyNow'>Buy Now</Link>
-                                        </div> 
+                                        </div>
+                                        </Link>
+
                                     </div>
                               
             
@@ -100,20 +162,21 @@ const Products = () => {
                                 </>
                             )
                         })}
+              
+                </div>  
                     </div>
-                </div>   
+                </div>
+                
+
+ 
             </>
         )
     }
 
   return (
-    <div className='products'>
-        <div className="container">
-            <div className="row productsRow">
-                <div className="aem-GridColumn aem-GridColumn--default--12">
+    <div class='products'>
+        <div class="container">
                     {loading ? <Loading/> : <ShowProducts/>}
-                </div>
-            </div>
         </div>
     </div>
   )

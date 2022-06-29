@@ -54,4 +54,28 @@
 .footer-policy li a {
   color: #545D63;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer-bottom-col {
+    padding: 0px;
+  }
+  .footer-items-details {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+  .footer-copyright {
+    margin-bottom: 25px;
+  }
+  .footer-col {
+    width: 100% !important;
+  }
+  .footer-col ul {
+    padding: 0px;
+  }
+}
 /*# sourceMappingURL=footer.css.map */
