@@ -17,10 +17,7 @@ const Cart = () => {
 
       <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
 
-      <div class="aem-GridColumn aem-GridColumn--default--2" key={cartItem.id}>
-        {/* <div className="topCol">
-          <button onClick={() => handleDelete(cartItem)}>X</button>
-        </div> */}
+      <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--4" key={cartItem.id}>
         <div class="middleCol">
           <div class="cart-img">
             <img src={cartItem.image} alt={cartItem.title} />
@@ -28,7 +25,7 @@ const Cart = () => {
          
         </div>
         </div>
-        <div class="aem-GridColumn aem-GridColumn--default--3">
+        <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--8">
         <div class="right">
             <h3 class="cart-title">{cartItem.title}</h3>
             <div>Size : medium</div>
@@ -38,7 +35,7 @@ const Cart = () => {
         </div>
 
 
-        <div class="aem-GridColumn aem-GridColumn--default--2">
+        <div class="product-cart-section aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
           <div class="quantity-section">
                 <div>
                     <span><img src={'../images/minus-icon.png'} /></span>
@@ -48,7 +45,7 @@ const Cart = () => {
                         
           </div>
         </div>
-        <div class="aem-GridColumn aem-GridColumn--default--2 cart-editable-items">
+        <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide cart-editable-items">
           <ul>
             <li><span><img src={'../images/edit.svg'} /></span>Edit item</li>
             <li><span><img src={'../images/trash.svg'} /></span>Remove</li>

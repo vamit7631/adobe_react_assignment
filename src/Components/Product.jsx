@@ -45,7 +45,7 @@ const Product = () => {
         return (
             <>
                 <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--2">
+                    <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide">
                         <div>
                             <ul class="item-list">
                                 <li> <img src={product.image} alt={product.title} /></li>
@@ -55,25 +55,28 @@ const Product = () => {
                         </div>
                        
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--4">
+                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                         <div class="single-product-img">
                         <img src={product.image} alt={product.title} />
                         </div>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--6">
+                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                         <h2>{product.title}</h2>
                         <h3>${product.price}</h3>
                         <p class="product-description">{product.description}</p>
                         <div class="quantity-section">
                             <h4>Quantity</h4>
-                            <div>
+                            <div class="qnty-input">
                                 <span><img src={'../images/minus-icon.png'} /></span>
                                 <input id="quantity" type="text" name="quantity" value="1" />
                                 <span><img src={'../images/plus-icon.png'} /></span>
                             </div>
                        
                         </div>
-                        <button className='add-cart' onClick={() => addProduct(product)}> Add to Cart</button>
+                        <div class="cart-section">
+                            <button className='add-cart' onClick={() => addProduct(product)}> Add to Cart</button>
+                        </div>
+                        
                     </div>
                   </div>
                   

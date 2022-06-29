@@ -63,3 +63,21 @@
 h4{
     font-weight: 500;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .qnty-input{
+        display: flex;
+        justify-content: center;
+        input{
+            width: 60%;
+        }
+    }
+    .cart-section{
+        display: flex;
+        justify-content: center;       
+        .add-cart{
+            width: 80%;
+        }
+    }
+
+}

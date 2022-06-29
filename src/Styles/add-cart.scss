@@ -40,3 +40,15 @@
         }
     }
 }
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .cart-heading{
+        font-size: 34px;
+    }
+    .product-cart-section{
+        input{
+            width: 60%;
+        }
+    }
+}
