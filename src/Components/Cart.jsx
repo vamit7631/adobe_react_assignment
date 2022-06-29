@@ -60,7 +60,7 @@ const Cart = () => {
 
   const emptyCart = () => {
     return (
-      <div className="col">
+      <div class="col">
         <h2>Your Cart is Empty!</h2>
       </div>
     );
@@ -68,15 +68,15 @@ const Cart = () => {
 
   const buttonCheckout = () => {
     return (
-      <div className="col">
-        <Link to="/checkout" className='checkout'>Proceed to Checkout</Link>
+      <div class="col">
+        <Link to="/checkout" class='checkout'>Proceed to Checkout</Link>
       </div>
     );
   }
 
   return (
     <>
-        <div className='add-cart-page main-container'>
+        <div class='add-cart-page main-container'>
         <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
           <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
             <h1 class="cart-heading"> Your S<span>hoppi</span>ng Bag </h1>

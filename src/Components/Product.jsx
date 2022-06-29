@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import { getSingleProduct } from '../Services/productServices';
 import { addCart } from '../redux/action';
 import '../Styles/single-product.css'
 const Product = () => { 
-    const {id} = useParams();
+    const { id } = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    let componentMounted = true;
 
     const dispatch = useDispatch();
 
@@ -14,38 +17,40 @@ const Product = () => {
         dispatch(addCart(product));
     }
 
-
-
     useEffect(() => {
-
-        const getProduct = async () => {
+        console.log("test1")
+        const getSingleProductfn = async () => {
             setLoading(true);
-
-            const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-            console.log(response,"rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
-            setProduct(await response.json());
-            setLoading(false);
+            console.log(id, "test2")
+            const response = await getSingleProduct(id);
+            console.log("test3")
+            if (componentMounted) {
+                setProduct(response);
+                setLoading(false);
+            }
+            return () => {
+                componentMounted = false;
+            }
         }
 
-        getProduct();
+        getSingleProductfn()
 
     }, [id]);
-
 
     const Loading = () => {
         return (
             <>
-                <p className='loading'>Loading...</p>
+                <p class='loading'>Loading...</p>
             </>
         )
     }
 
 
-    const ShowProduct = () => {
+    const ShowProduct = () => { 
         return (
             <>
-                <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
-                    <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide">
+            <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide">
                         <div>
                             <ul class="item-list">
                                 <li> <img src={product.image} alt={product.title} /></li>
@@ -55,12 +60,12 @@ const Product = () => {
                         </div>
                        
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                         <div class="single-product-img">
                         <img src={product.image} alt={product.title} />
                         </div>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                    <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                         <h2>{product.title}</h2>
                         <h3>${product.price}</h3>
                         <p class="product-description">{product.description}</p>
@@ -74,19 +79,18 @@ const Product = () => {
                        
                         </div>
                         <div class="cart-section">
-                            <button className='add-cart' onClick={() => addProduct(product)}> Add to Cart</button>
+                            <button class='add-cart' onClick={() => addProduct(product)}> Add to Cart</button>
                         </div>
                         
                     </div>
                   </div>
-                  
-                
             </>
         )
     }
 
+
     return (
-        <div className='signle-product main-container'>
+        <div class='signle-product main-container'>
             <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
                 <div class="single-product-item">
                     <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">

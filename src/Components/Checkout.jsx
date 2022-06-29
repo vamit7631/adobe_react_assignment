@@ -12,7 +12,7 @@ const Checkout = () => {
         total = total + item.price;
 
         return (
-            <div className="totalContent">
+            <div class="totalContent">
                 <p>{item.title}</p>
                 <span>{item.price}</span>
             </div>
@@ -21,32 +21,32 @@ const Checkout = () => {
 
   return (
     <>
-        <div className='checkoutItems container'>
-            <div className="row">
-                <div className="col">
-                    <div className="formGroup">
+        <div class='checkoutItems container'>
+            <div class="row">
+                <div class="col">
+                    <div class="formGroup">
                         <label htmlFor="name">Name</label>
                         <input type="text" id='name' />
                     </div>
-                    <div className="formGroup">
+                    <div class="formGroup">
                         <label htmlFor="address">Address</label>
                         <input type="text" id='address' />
                     </div>
-                    <div className="formGroup">
+                    <div class="formGroup">
                         <label htmlFor="phone">Phone</label>
                         <input type="text" id='phone' />
                     </div>
-                    <div className="formGroup">
-                        <Link to="/order" className='checkout'>Checkout</Link>
+                    <div class="formGroup">
+                        <Link to="/order" class='checkout'>Checkout</Link>
                     </div>
                 </div>
-                <div className="col">
-                    <div className="totalCart">
+                <div class="col">
+                    <div class="totalCart">
                         <h2>Your Cart <span>{state.length}</span></h2>
-                        <div className="totalInfo">
+                        <div class="totalInfo">
                             {state.map(itemList)}
                         </div>
-                        <div className="total">
+                        <div class="total">
                             <p>Total:</p>
                             <span>${total}</span>
                         </div>

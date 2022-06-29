@@ -38,7 +38,7 @@ const Products = () => {
     const Loading = () => {
         return (
             <>
-                <p className='loading'>Loading...</p>
+                <p class='loading'>Loading...</p>
             </>
         )
     }
@@ -136,19 +136,19 @@ const Products = () => {
                         </div>
                     </div>
                     <div class="prdct-container aem-GridColumn aem-GridColumn--default--9 aem-Grid--phone--12">
-                    <div className="products-listing aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
+                    <div class="products-listing aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
                         {filter.map((product) => {
                             return(
                                 <>
                                     <div class="main-products aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--6" key={product.id}>
-                                        <Link to={`/products/${product.id}`} className='buyNow'>
+                                        <Link to={`/products/${product.id}`} class='buyNow'>
                                         <div class="category-product-outer">
                                         <div class="category-product-img">
                                             <img class="product-img" src={product.image} alt={product.title} />
                                             </div>
                                             <div>
-                                            <h3 className="category-product-title">{product.title.substring(0, 18)}...</h3>
-                                            <div className="product-details">
+                                            <h3 class="category-product-title">{product.title.substring(0, 18)}...</h3>
+                                            <div class="product-details">
                                                 {/* <span>Rate: {product.rating.rate}</span> */}
                                                         <div>${product.price}</div>
                                                         <span class="product-rating">&#9825;</span>

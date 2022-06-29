@@ -6,13 +6,13 @@ export const getAllProducts = () => {
     console.log("Get All Products");
     return new Promise((resolve, reject) => {
         try {
-          axios.get(GET_ALL_PRODUCTS)  
-              .then((res) => {
-                  console.log("getAllProducts> axios res=", res);
-                  resolve(res.data);   
+            axios.get(GET_ALL_PRODUCTS)  
+                .then((res) => {
+                    console.log("getAllProducts> axios res=", res);
+                    resolve(res.data);   
               }).catch((err) => {
-                console.log("getAllProducts > axios err=", err);
-                reject("Error in getAllProducts axios!");
+                    console.log("getAllProducts > axios err=", err);
+                    reject("Error in getAllProducts axios!");
             })
         } catch (err) {
             reject(SYSTEM_ERROR);
@@ -20,3 +20,23 @@ export const getAllProducts = () => {
     });
 
 }
+
+
+export const getSingleProduct = (id) => { 
+    console.log("Get Single Product");
+
+    return new Promise((resolve, reject) => { 
+        try {
+            axios.get(GET_ALL_PRODUCTS + '/' + id)
+                .then((res) => { 
+                    console.log("getSingleProduct> axios res=", res);
+                    resolve(res.data);   
+                }).catch((err) => {
+                    console.log("getSingleProduct > axios err=", err);
+                    reject("Error in getSingleProduct axios!");
+                })
+        } catch (err) {
+            reject(SYSTEM_ERROR);
+        }
+    })
+} 

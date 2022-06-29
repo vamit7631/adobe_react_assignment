@@ -3,7 +3,7 @@ import Products from './Products'
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div class='home'>
       <div class="main-container">
         <div class="banner-columns aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
         <div class="category-banner aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
