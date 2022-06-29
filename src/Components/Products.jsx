@@ -50,12 +50,10 @@ const Products = () => {
 
     const setProductSorting = async (e) => {
         console.log(e.target.value,"typevalue")
-        const response = await getAllProducts(e);
+        const sortdata = await getAllProducts(e);
 
         if(componentMounted) {
-            setData(response);
-            setFilter(response);
-            setLoading(false);
+            setFilter(sortdata);
         }
     }
 
