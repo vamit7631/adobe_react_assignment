@@ -96,12 +96,21 @@
         padding: 0px !important;
     }
     .product-img{
-        height: 120px;
+        height: 135px;
         width: 100%;
     }
     .category-product-title{
         height: 40px;
         font-size: 14px;
+    }
+    .category-product-outer{
+        padding: 10px !important;
+    }
+    .products-header-section{
+        margin: 0px !important;
+    }
+    .product-sorting{
+        display: none;
     }
 }
 

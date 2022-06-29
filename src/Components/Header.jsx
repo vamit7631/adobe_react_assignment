@@ -7,8 +7,8 @@ function Header() {
     return (
         <header>
             <div class="max-width_header main-container">
-                <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
-                        <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
+                <div class="header-menu aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12">
+                        <div class="aem-GridColumn aem-GridColumn--default--2">
                             <div class="venia-logo"> <Link to="/"> <img 
                             src={'../images/venia_logo.png'} />
                         </Link></div>
@@ -32,7 +32,24 @@ function Header() {
                         <div class="cart-btn"> <Link to="/cart"> <img 
            src={'../images/cart.png'} /><span>({state.length})</span></Link></div>
                     </div>  
-            </div>
+                </div>
+                
+                <div class="mobile-nav aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12">
+                        <div class="menu-logo aem-GridColumn aem-GridColumn--default--2"> <img 
+                        src={'../images/menu_icon.png'} /></div>
+                        <div class="aem-GridColumn aem-GridColumn--default--6">
+                            <div class="venia-logo"> <Link to="/"> <img 
+                            src={'../images/venia_logo.png'} />
+                        </Link></div>
+                    </div>
+                    <div class="header-socials aem-GridColumn aem-GridColumn--default--4">
+                        <div class="search-btn"><img 
+           src={'../images/search.svg'} /></div>
+                        <div class="cart-btn"> <Link to="/cart"> <img 
+           src={'../images/cart.png'} /><span>({state.length})</span></Link></div>
+                    </div> 
+                </div>
+
             </div>
            
         </header>

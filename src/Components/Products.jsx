@@ -51,7 +51,7 @@ const Products = () => {
             <>
 
                 <div class="products-header-section aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
-                    <div class="breadcrumbs-section aem-GridColumn aem-GridColumn--default--6">
+                    <div class="breadcrumbs-section aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                         <ul class="breadcrumb">
                             <li>Clothing <span>&nbsp;</span> </li>
                             <li>Women's <span>&nbsp;</span></li>

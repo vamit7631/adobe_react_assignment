@@ -49,9 +49,55 @@
   padding-bottom: 10px;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   .main-container .aem-Grid {
     width: 100%;
+  }
+  .header-menu {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .menu-logo {
+    width: 35px;
+    height: 30px;
+    padding: 10px 5px;
+    margin-top: 20px;
+  }
+  .menu-logo img {
+    width: 100%;
+  }
+  .header-socials {
+    padding: 0px;
+  }
+  .search-btn {
+    margin-right: 15px !important;
+  }
+  .cart-btn {
+    margin-right: 0px !important;
+  }
+  .aem-GridColumn {
+    padding: 5px;
+  }
+  .banner-columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .banner-columns .category-banner {
+    margin-top: -65px;
+  }
+  .banner-columns .banner-img img {
+    height: 200px;
   }
 }
 /*# sourceMappingURL=main.css.map */

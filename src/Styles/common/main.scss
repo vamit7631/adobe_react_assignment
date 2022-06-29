@@ -48,12 +48,53 @@
     }
 }
 
+.mobile-nav{
+    display: none;
+}
+
 
 @media (min-width: 320px) and (max-width: 768px) {
     .main-container .aem-Grid{
         width: 100%;
     }
-    // .aem-GridColumn{
-    //     padding: 0px !important;
-    // }
+    .header-menu{
+        display: none;
+    }
+    .mobile-nav{
+        display: block;
+    }
+    .menu-logo{
+        width: 35px;
+        height: 30px;
+        padding: 10px 5px;
+        margin-top: 20px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .header-socials{
+        padding: 0px;
+    }
+        .search-btn{
+            margin-right: 15px !important;
+        }
+        .cart-btn{
+            margin-right: 0px !important;
+        }
+    .aem-GridColumn{
+            padding: 5px;
+    }
+    .banner-columns{
+        display: flex;
+        flex-direction: column-reverse;
+        .category-banner{
+            margin-top: -65px;
+        }
+        .banner-img{
+            img{
+                height: 200px;
+            }
+        }
+    }
 }
