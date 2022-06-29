@@ -39,11 +39,11 @@ const Footer = () => {
                                     <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
                                     <div class="footer-social-icons">
                                         <span><img 
-          alt="user's image" src={'../images/instagram.svg'} /></span>
+           src={'../images/instagram.svg'} /></span>
                                         <span><img 
-          alt="user's image" src={'../images/facebook.svg'} /></span>
+           src={'../images/facebook.svg'} /></span>
                                         <span><img 
-          alt="user's image" src={'../images/twitter.svg'} /></span>
+           src={'../images/twitter.svg'} /></span>
                                     </div>
                         <div></div>
                     </div>
@@ -61,8 +61,7 @@ const Footer = () => {
                 <div class="aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12 aem-Grid--phone--12 ">
                     <div class="footer-items-details aem-Grid aem-Grid--8 aem-Grid--default--4 aem-Grid--phone--12">
                         <div class="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--hide">
-                        <div class="venia-logo"><img 
-          alt="user's image" src={'../images/venia_logo.png'} /></div>
+                        <div class="venia-logo"><img src={'../images/venia_logo.png'} /></div>
                         </div>
                         <div class="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12 footer-copyright">
                             <span>@Company Name Address Ave, City Name, State ZIP</span>  

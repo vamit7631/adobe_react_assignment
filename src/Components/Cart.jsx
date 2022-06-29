@@ -20,7 +20,7 @@ const Cart = () => {
       <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--4" key={cartItem.id}>
         <div class="middleCol">
           <div class="cart-img">
-            <img src={cartItem.image} alt={cartItem.title} />
+            <img src={cartItem.image} />
           </div>
          
         </div>

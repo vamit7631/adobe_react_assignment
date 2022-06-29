@@ -12,11 +12,11 @@ const Products = () => {
     let componentMounted = true;
 
     useEffect(() => {
-
+        const defaultValue = "desc";
         const getProducts = async () => {
             setLoading(true);
 
-            const response = await getAllProducts();
+            const response = await getAllProducts(defaultValue);
             if(componentMounted) {
                 setData(response);
                 setFilter(response);
@@ -48,6 +48,17 @@ const Products = () => {
         setFilter(updatedList);
     }
 
+    const setProductSorting = async (e) => {
+        console.log(e.target.value,"typevalue")
+        const response = await getAllProducts(e);
+
+        if(componentMounted) {
+            setData(response);
+            setFilter(response);
+            setLoading(false);
+        }
+    }
+
     const ShowProducts = () => {
         return (
             <>
@@ -62,9 +73,9 @@ const Products = () => {
                     </div>
                     <div class="aem-GridColumn aem-GridColumn--default--6">
                         <div class="product-sorting">
-                            <select name="products" id="products">
+                            <select name="products" id="products" onChange={(e) => setProductSorting(e)}>
                                 <option value="asc">Sort by Latest</option>
-                                <option value="desc">Sort by Price</option>
+                                <option value="desc">Sort by Oldest</option>
                             </select>
                         </div>
                    
@@ -144,7 +155,7 @@ const Products = () => {
                                         <Link to={`/products/${product.id}`} class='buyNow'>
                                         <div class="category-product-outer">
                                         <div class="category-product-img">
-                                            <img class="product-img" src={product.image} alt={product.title} />
+                                            <img class="product-img" src={product.image} />
                                             </div>
                                             <div>
                                             <h3 class="category-product-title">{product.title.substring(0, 18)}...</h3>

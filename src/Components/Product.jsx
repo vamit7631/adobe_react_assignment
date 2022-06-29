@@ -18,12 +18,9 @@ const Product = () => {
     }
 
     useEffect(() => {
-        console.log("test1")
         const getSingleProductfn = async () => {
             setLoading(true);
-            console.log(id, "test2")
             const response = await getSingleProduct(id);
-            console.log("test3")
             if (componentMounted) {
                 setProduct(response);
                 setLoading(false);
@@ -53,16 +50,16 @@ const Product = () => {
                     <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide">
                         <div>
                             <ul class="item-list">
-                                <li> <img src={product.image} alt={product.title} /></li>
-                                <li> <img src={product.image} alt={product.title} /></li>
-                                <li> <img src={product.image} alt={product.title} /></li>
+                                <li> <img src={product.image} /></li>
+                                <li> <img src={product.image} /></li>
+                                <li> <img src={product.image} /></li>
                             </ul>
                         </div>
                        
                     </div>
                     <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                         <div class="single-product-img">
-                        <img src={product.image} alt={product.title} />
+                        <img src={product.image} />
                         </div>
                     </div>
                     <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">

@@ -2,11 +2,10 @@ import axios from 'axios'
 import { GET_ALL_PRODUCTS } from "./CONSTANTS";
 import { SYSTEM_ERROR } from "../Config/CONSTANTS";
 
-export const getAllProducts = () => { 
-    console.log("Get All Products");
+export const getAllProducts = (type) => { 
     return new Promise((resolve, reject) => {
         try {
-            axios.get(GET_ALL_PRODUCTS)  
+            axios.get(GET_ALL_PRODUCTS + '?sort=' + type)  
                 .then((res) => {
                     console.log("getAllProducts> axios res=", res);
                     resolve(res.data);   
