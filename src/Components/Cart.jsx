@@ -15,7 +15,7 @@ const Cart = () => {
   const cartItems = (cartItem) => {
     return (
 
-      <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
+      <div class="prdcts-cart-items aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
 
       <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--4" key={cartItem.id}>
         <div class="middleCol">
@@ -25,7 +25,7 @@ const Cart = () => {
          
         </div>
         </div>
-        <div class="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--8">
+        <div class="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--8">
         <div class="right">
             <h3 class="cart-title">{cartItem.title}</h3>
             <div>Size : medium</div>
@@ -45,7 +45,7 @@ const Cart = () => {
                         
           </div>
         </div>
-        <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide cart-editable-items">
+        <div class="cart-editable-icons aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide cart-editable-items">
           <ul>
             <li><span><img src={'../images/edit.svg'} /></span>Edit item</li>
             <li><span><img src={'../images/trash.svg'} /></span>Remove</li>
@@ -60,7 +60,7 @@ const Cart = () => {
 
   const emptyCart = () => {
     return (
-      <div class="col">
+      <div class="empty-cart">
         <h2>Your Cart is Empty!</h2>
       </div>
     );
@@ -74,8 +74,47 @@ const Cart = () => {
           <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
             <h1 class="cart-heading"> Your S<span>hoppi</span>ng Bag </h1>
           </div>
+          <div class="aem-GridColumn aem-Grid aem-Grid--9 aem-GridColumn--default--9 aem-GridColumn--phone--12">
                   {state.length === 0 && emptyCart()}
                   {state.length !== 0 && state.map(cartItems)} 
+          </div>
+            <div class="pricing-summary aem-GridColumn aem-Grid aem-Grid--3 aem-GridColumn--default--3 aem-GridColumn--phone--12">
+                <div>
+                      <h4>Pricing Summary</h4>
+                      <div class="pricing-section">
+                            <span class="left">Subtotal</span>
+                            <span class="right">$388.00</span>
+              </div>
+              <div class="pricing-section">
+                            <span class="left">Coupon</span>
+                            <span class="right">-$77.60</span>
+              </div>
+              <div class="pricing-section">
+                            <span class="left">Gift Card</span>
+                            <span class="right">-$100.00</span>
+              </div>
+              <div class="pricing-section">
+                            <span class="left">Estimated tax</span>
+                            <span class="right">$23.00</span>
+              </div>
+              <div class="pricing-section">
+                            <span class="left">Estimated Shipping</span>
+                            <span class="right">Free</span>
+              </div>
+              <div class="pricing-section">
+                            <span class="left"><strong>Estimated Total</strong></span>
+                            <span class="right"><strong>$233.00</strong></span>
+              </div>
+              <div class="cart-btns">
+                <button class='checkout-btn'><span></span> CHECKOUT</button>
+                <div class="paypal-btn">
+                    <img src={'../images/paypal-btn.png'} />
+                </div>
+                      
+              </div>
+
+                </div>
+            </div>
           </div> 
         </div>
     </>
