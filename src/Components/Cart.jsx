@@ -66,13 +66,6 @@ const Cart = () => {
     );
   }
 
-  const buttonCheckout = () => {
-    return (
-      <div class="col">
-        <Link to="/checkout" class='checkout'>Proceed to Checkout</Link>
-      </div>
-    );
-  }
 
   return (
     <>
@@ -83,7 +76,6 @@ const Cart = () => {
           </div>
                   {state.length === 0 && emptyCart()}
                   {state.length !== 0 && state.map(cartItems)} 
-                  {state.length !== 0 && buttonCheckout()} 
           </div> 
         </div>
     </>
