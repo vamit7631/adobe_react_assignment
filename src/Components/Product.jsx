@@ -66,9 +66,20 @@ const Product = () => {
                         <h2>{product.title}</h2>
                         <h3>${product.price}</h3>
                         <p class="product-description">{product.description}...<span class="read-more"><a href="">Read more</a></span></p>
+                        <div class="product-colors-section">
+                            <h4>Color</h4>
+                            <div class="product-colors-outer">
+                                <ul class="product-colors">
+                                    <li class="blue-clr"></li>
+                                    <li class="red-clr"></li>
+                                    <li class="black-clr"></li>
+                                    <li class="grey-clr"></li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="product-size-section">
                             <h4>Size</h4>
-                            <div>
+                            <div class="product-size-outer">
                                 <ul class="product-sizes">
                                     <li>XS</li>
                                     <li>S</li>

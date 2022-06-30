@@ -63,6 +63,70 @@ h4 {
   font-weight: 500;
 }
 
+.product-size-outer {
+  display: table-cell;
+}
+
+.product-size-outer .product-sizes {
+  padding: 0px;
+  margin: 0px;
+}
+
+.product-size-outer .product-sizes li {
+  float: left;
+  width: 40px;
+  text-align: center;
+  border: 2px solid #545D63;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.product-colors-outer {
+  display: table-cell;
+}
+
+.product-colors-outer .product-colors {
+  padding: 0px;
+  margin: 0px;
+}
+
+.product-colors-outer .product-colors li {
+  width: 45px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  float: left;
+}
+
+.product-colors-outer .product-colors .blue-clr {
+  background-color: #2080b4;
+  background-image: url("../assets/images/Swatch_01.png");
+}
+
+.product-colors-outer .product-colors .red-clr {
+  background-color: #9a305c;
+  background-image: url("../assets/images/Swatch_02.png");
+}
+
+.product-colors-outer .product-colors .black-clr {
+  background-color: #000000c2;
+  background-image: url("../assets/images/Swatch_03.png");
+}
+
+.product-colors-outer .product-colors .grey-clr {
+  background-color: #7c7c7cc7;
+  background-image: url("../assets/images/Swatch_04.png");
+}
+
+.read-more a {
+  color: #181C24;
+}
+
+.single-product-item {
+  margin-top: 20px;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   .qnty-input {
     display: -webkit-box;
