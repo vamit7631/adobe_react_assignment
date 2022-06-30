@@ -65,7 +65,19 @@ const Product = () => {
                     <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
                         <h2>{product.title}</h2>
                         <h3>${product.price}</h3>
-                        <p class="product-description">{product.description}</p>
+                        <p class="product-description">{product.description}...<span class="read-more"><a href="">Read more</a></span></p>
+                        <div class="product-size-section">
+                            <h4>Size</h4>
+                            <div>
+                                <ul class="product-sizes">
+                                    <li>XS</li>
+                                    <li>S</li>
+                                    <li>M</li>
+                                    <li>L</li>
+                                    <li>XL</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="quantity-section">
                             <h4>Quantity</h4>
                             <div class="qnty-input">
