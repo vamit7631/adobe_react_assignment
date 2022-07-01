@@ -10,7 +10,7 @@ function Header() {
                 <div class="header-menu aem-Grid aem-Grid--12 aem-Grid--tablet--12 aem-Grid--default--12">
                         <div class="aem-GridColumn aem-GridColumn--default--2">
                             <div class="venia-logo"> <Link to="/"> <img 
-                            src={'../images/venia_logo.png'} />
+                            src={'./images/venia_logo.png'} />
                         </Link></div>
                         </div>
                         <div class="navigation aem-GridColumn aem-GridColumn--default--7">
@@ -26,27 +26,27 @@ function Header() {
                     
                     <div class="header-socials aem-GridColumn aem-GridColumn--default--3">
                         <div class="search-btn"><img 
-           src={'../images/search.svg'} /><span>Search</span></div>
+           src={'./images/search.svg'} /><span>Search</span></div>
                         <div class="signin-btn"><img 
-           src={'../images/user.svg'} /><span>Sign in</span></div>
+           src={'./images/user.svg'} /><span>Sign in</span></div>
                         <div class="cart-btn"> <Link to="/cart"> <img 
-           src={'../images/cart.png'} /><span>({state.length})</span></Link></div>
+           src={'./images/cart.png'} /><span>({state.length})</span></Link></div>
                     </div>  
                 </div>
                 
                 <div class="mobile-nav aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12">
                         <div class="menu-logo aem-GridColumn aem-GridColumn--default--2"> <img 
-                        src={'../images/menu_icon.png'} /></div>
+                        src={'./images/menu_icon.png'} /></div>
                         <div class="aem-GridColumn aem-GridColumn--default--6">
                             <div class="venia-logo"> <Link to="/"> <img 
-                            src={'../images/venia_logo.png'} />
+                            src={'./images/venia_logo.png'} />
                         </Link></div>
                     </div>
                     <div class="header-socials aem-GridColumn aem-GridColumn--default--4">
                         <div class="search-btn"><img 
-           src={'../images/search.svg'} /></div>
+           src={'./images/search.svg'} /></div>
                         <div class="cart-btn"> <Link to="/cart"> <img 
-           src={'../images/cart.png'} /><span>({state.length})</span></Link></div>
+           src={'./images/cart.png'} /><span>({state.length})</span></Link></div>
                     </div> 
                 </div>
 

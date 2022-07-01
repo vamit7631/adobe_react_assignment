@@ -38,18 +38,18 @@ const Cart = () => {
         <div class="product-cart-section aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
           <div class="quantity-section">
                 <div>
-                    <span><img src={'../images/minus-icon.png'} /></span>
+                    <span><img src={'/images/minus-icon.png'} /></span>
                     <input id="quantity" type="text" name="quantity" value="1" />
-                    <span><img src={'../images/plus-icon.png'} /></span>
+                    <span><img src={'./images/plus-icon.png'} /></span>
                 </div>
                         
           </div>
         </div>
         <div class="cart-editable-icons aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide cart-editable-items">
           <ul>
-            <li><span><img src={'../images/edit.svg'} /></span>Edit item</li>
-            <li><span><img src={'../images/trash.svg'} /></span>Remove</li>
-            <li><span><img src={'../images/heart.svg'} /></span>Save for later</li>
+            <li><span><img src={'./images/edit.svg'} /></span>Edit item</li>
+            <li><span><img src={'./images/trash.svg'} /></span>Remove</li>
+            <li><span><img src={'./images/heart.svg'} /></span>Save for later</li>
           </ul>
         </div>
 
@@ -108,7 +108,7 @@ const Cart = () => {
               <div class="cart-btns">
                 <button class='checkout-btn'><span></span> CHECKOUT</button>
                 <div class="paypal-btn">
-                    <img src={'../images/paypal-btn.png'} />
+                    <img src={'./images/paypal-btn.png'} />
                 </div>
                       
               </div>

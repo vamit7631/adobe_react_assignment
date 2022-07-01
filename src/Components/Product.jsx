@@ -92,9 +92,9 @@ const Product = () => {
                         <div class="quantity-section">
                             <h4>Quantity</h4>
                             <div class="qnty-input">
-                                <span><img src={'../images/minus-icon.png'} /></span>
+                                <span><img src={'./images/minus-icon.png'} /></span>
                                 <input id="quantity" type="text" name="quantity" value="1" />
-                                <span><img src={'../images/plus-icon.png'} /></span>
+                                <span><img src={'./images/plus-icon.png'} /></span>
                             </div>
                        
                         </div>
