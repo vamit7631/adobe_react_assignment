@@ -30,7 +30,7 @@ function Header() {
                         <div class="signin-btn"><img 
            src={'./images/user.svg'} /><span>Sign in</span></div>
                         <div class="cart-btn"> <Link to="/cart"> <img 
-           src={'./images/cart.png'} /><span>({state.length})</span></Link></div>
+           src={'./images/cart.png'} /><span>{state.length}</span></Link></div>
                     </div>  
                 </div>
                 
@@ -46,7 +46,7 @@ function Header() {
                         <div class="search-btn"><img 
            src={'./images/search.svg'} /></div>
                         <div class="cart-btn"> <Link to="/cart"> <img 
-           src={'./images/cart.png'} /><span>({state.length})</span></Link></div>
+           src={'./images/cart.png'} /><span>{state.length}</span></Link></div>
                     </div> 
                 </div>
 

@@ -48,7 +48,7 @@ const Cart = () => {
         <div class="cart-editable-icons aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide cart-editable-items">
           <ul>
             <li><span><img src={'./images/edit.svg'} /></span>Edit item</li>
-            <li><span><img src={'./images/trash.svg'} /></span>Remove</li>
+            <li onClick={() => handleDelete(cartItem)}><span><img src={'./images/trash.svg'} /></span>Remove</li>
             <li><span><img src={'./images/heart.svg'} /></span>Save for later</li>
           </ul>
         </div>

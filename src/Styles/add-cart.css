@@ -32,7 +32,8 @@
 }
 
 .cart-editable-items ul li {
-  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 7px;
 }
 
 .cart-editable-items ul li img {
