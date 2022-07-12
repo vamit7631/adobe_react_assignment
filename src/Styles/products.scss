@@ -87,6 +87,19 @@
     padding-bottom: 25px;
 }
 
+
+
+.pagination{
+    text-align: center;
+    button{
+        background-color: #fff;
+        border: 0px;
+        font-size: 15px;
+        letter-spacing: 10px;
+    }
+}
+
+
 @media (min-width: 320px) and (max-width: 768px) {
     .prdct-container{
         width: 100%!important;
