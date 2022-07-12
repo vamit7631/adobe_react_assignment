@@ -11,7 +11,7 @@ const Products = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const defaultValue = "desc";
+        const defaultValue = "asc";
         const getProducts = async () => {
             setLoading(true);
             const response = await getAllProducts(defaultValue);
@@ -24,7 +24,11 @@ const Products = () => {
     }, []);
 
 
-    
+    const SetProductSorting = async (e) => { 
+        console.log(e.target.value, "typevalue")
+        const sortdata = await getAllProducts(e.target.value);
+        setData(sortdata);
+    }
     
     const Loading = () => {
         return (
@@ -42,6 +46,26 @@ const Products = () => {
   return (
       <div class='products'>
           <div class="container">
+          <div class="products-header-section aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
+                    <div class="breadcrumbs-section aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
+                        <ul class="breadcrumb">
+                            <li>Clothing <span>&nbsp;</span> </li>
+                            <li>Women's <span>&nbsp;</span></li>
+                            <li>Outerwear <span>&nbsp;</span></li>
+                        </ul>
+                </div>
+                <div class="aem-GridColumn aem-GridColumn--default--6">
+                        <div class="product-sorting">
+                            <select name="products" id="products" onChange={(e) => SetProductSorting(e)}>
+                                <option value="asc">Sort by Latest</option>
+                                <option value="desc">Sort by Oldest</option>
+                            </select>
+                        </div>
+                   
+                </div>
+
+       
+            </div>
           {data.length > 0 ? (
         <>
           <Pagination
@@ -119,26 +143,7 @@ function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }) {
 
     return (
         <>
-            <div class="products-header-section aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12">
-                    <div class="breadcrumbs-section aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
-                        <ul class="breadcrumb">
-                            <li>Clothing <span>&nbsp;</span> </li>
-                            <li>Women's <span>&nbsp;</span></li>
-                            <li>Outerwear <span>&nbsp;</span></li>
-                        </ul>
-                </div>
-                <div class="aem-GridColumn aem-GridColumn--default--6">
-                        <div class="product-sorting">
-                            <select name="products" id="products" >
-                                <option value="asc">Sort by Latest</option>
-                                <option value="desc">Sort by Oldest</option>
-                            </select>
-                        </div>
-                   
-                </div>
-
-       
-            </div>
+           
             <div class="aem-GridColumn aem-Grid aem-Grid--12 aem-GridColumn--default--12 aem-Grid--phone--12">
                 <div class="category-product-filters aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide">
                     <h4>Filters</h4>
