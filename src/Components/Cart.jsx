@@ -6,7 +6,6 @@ import '../Styles/add-cart.css'
 const Cart = () => {
 
   const state = useSelector((state) => state.HandleCart);
-
   const dispatch = useDispatch();
 
   const handleDelete = (item) => {
@@ -40,7 +39,7 @@ const Cart = () => {
           <div class="quantity-section">
                 <div>
                     <span><img src={'/images/minus-icon.png'} /></span>
-                    <input id="quantity" type="text" name="quantity" value="1" />
+              <input id="quantity" type="text" name="quantity" value={ cartItem.qty } />
                     <span><img src={'./images/plus-icon.png'} /></span>
                 </div>
                         

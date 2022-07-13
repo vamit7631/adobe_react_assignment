@@ -3,12 +3,11 @@ const cart = [];
 const HandleCart = (state = cart, action) => {
     
     const product = action.payload;
-
     switch (action.type) {
         case "ADDITEM":
             //If product already exist
             const exist = state.find((x) => x.id === product.id);
-            if(exist) {
+            if (exist) {
                 //increase for quantity if already exist product in cart
                 return state.map((x) => x.id === product.id ? {...x, qty: x.qty + 1} : x);
             } else {
@@ -18,7 +17,7 @@ const HandleCart = (state = cart, action) => {
                     ...state,
                     {
                         ...product,
-                        qty: 1,
+                        qty: product.qty,
                     }
                 ]
             }

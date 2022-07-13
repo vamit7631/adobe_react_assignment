@@ -1,8 +1,9 @@
 //For Add Item from Cart
-export const addCart = (product) => {
+export const addCart = (product, quantity) => {
+    product.qty = quantity
     return {
         type: "ADDITEM",
-        payload: product,
+        payload: product
     }
 }
 

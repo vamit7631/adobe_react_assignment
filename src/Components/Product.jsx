@@ -6,6 +6,7 @@ import { addCart } from '../redux/action';
 import '../Styles/single-product.css'
 const Product = () => { 
     const { id } = useParams();
+    let [num, setNum] = useState(1);
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -13,8 +14,8 @@ const Product = () => {
 
     const dispatch = useDispatch();
 
-    const addProduct = (product) => {
-        dispatch(addCart(product));
+    const addProduct = (product,num) => {
+        dispatch(addCart(product,num));
     }
 
     useEffect(() => {
@@ -34,6 +35,21 @@ const Product = () => {
 
     }, [id]);
 
+    let decNum = () => {
+        if (num > 0) {
+            setNum(num - 1);
+        }
+    }
+
+    let incNum = () => {
+        if (num < 10) {
+            setNum(Number(num) + 1);
+        }
+    };
+
+    let handleChange = (e) => {
+        setNum(e.target.value);
+    }
     const Loading = () => {
         return (
             <>
@@ -92,14 +108,14 @@ const Product = () => {
                         <div class="quantity-section">
                             <h4>Quantity</h4>
                             <div class="qnty-input">
-                                <span><img src={'./images/minus-icon.png'} /></span>
-                                <input id="quantity" type="text" name="quantity" value="1" />
-                                <span><img src={'./images/plus-icon.png'} /></span>
+                                <span><img src={'./images/minus-icon.png'} onClick={decNum}  /></span>
+                                <input id="quantity" type="text" name="quantity" value={num} onChange={handleChange} />
+                                <span><img src={'./images/plus-icon.png'} onClick={incNum}/></span>
                             </div>
                        
                         </div>
                         <div class="cart-section">
-                            <button class='add-cart' onClick={() => addProduct(product)}> Add to Cart</button>
+                            <button class='add-cart' onClick={() => addProduct(product,num)}> Add to Cart</button>
                         </div>
                         
                     </div>
