@@ -38,7 +38,7 @@ const Cart = () => {
         <div class="product-cart-section aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
           <div class="quantity-section">
                 <div>
-                    <span><img src={'/images/minus-icon.png'} alt="minus-icon" /></span>
+                    <span><img src={'./images/minus-icon.png'} alt="minus-icon" /></span>
               <input id="quantity" type="text" name="quantity" value={ cartItem.qty } />
                     <span><img src={'./images/plus-icon.png'} alt="plus-icon"/></span>
                 </div>
