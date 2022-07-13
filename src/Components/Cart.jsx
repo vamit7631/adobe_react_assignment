@@ -1,15 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCart } from '../redux/action';
+import { deleteCart,addCart } from '../redux/action';
 import {Link} from "react-router-dom"
 import '../Styles/add-cart.css'
 const Cart = () => {
-
   const state = useSelector((state) => state.HandleCart);
   const dispatch = useDispatch();
 
   const handleDelete = (item) => {
     dispatch(deleteCart(item));
+  }
+
+  const handleAdd = (item, qty) => {
+    dispatch(addCart(item , qty));
   }
 
   const cartItems = (cartItem) => {
@@ -38,9 +41,9 @@ const Cart = () => {
         <div class="product-cart-section aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--6">
           <div class="quantity-section">
                 <div>
-                    <span><img src={'./images/minus-icon.png'} alt="minus-icon" /></span>
+                    <span ><img src={'./images/minus-icon.png'} alt="minus-icon" onClick={() => handleDelete(cartItem)} /></span>
               <input id="quantity" type="text" name="quantity" value={ cartItem.qty } />
-                    <span><img src={'./images/plus-icon.png'} alt="plus-icon"/></span>
+                    <span><img src={'./images/plus-icon.png'} alt="plus-icon" onClick={() => handleAdd(cartItem, cartItem.qty )} /></span>
                 </div>
                         
           </div>
