@@ -151,24 +151,29 @@ function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }) {
                         <h5>Categories</h5>
                         <ul>
                             <li>
-                                <input type="checkbox" name='allitems' class='btn' defaultChecked={true} />
-                                <label for="allitems"> All</label><br></br>
+                                <label for="allitems">
+                                    <input type="checkbox" name='allitems' class='btn' defaultChecked={true} />
+                                 All</label><br></br>
                             </li>
                             <li>
-                                <input type="checkbox" name='mens_clothing' class='btn' />
-                                <label for="mens_clothing"> Men's clothing</label><br></br>
+                                <label for="mens_clothing">
+                                    <input type="checkbox" name='mens_clothing' class='btn' />
+                                 Men's clothing</label><br></br>
                             </li>
                             <li>
-                                <input type="checkbox" name='womens_clothing' class='btn' />
-                                <label for="womens_clothing"> Women's clothing</label><br></br>
+                                <label for="womens_clothing">
+                                    <input type="checkbox" name='womens_clothing' class='btn' />
+                                 Women's clothing</label><br></br>
                             </li>
                             <li>
-                                <input type="checkbox" name='jewelery' class='btn' />
-                                <label for="jewelery"> Jewelery</label><br></br>
+                                <label for="jewelery">
+                                    <input type="checkbox" name='jewelery' class='btn' />
+                                 Jewelery</label><br></br>
                             </li>
                             <li>
-                                <input type="checkbox" name='electronics' class='btn' />
-                                <label for="electronics"> Electronics</label><br></br>
+                                <label for="electronics">
+                                    <input type="checkbox" name='electronics' class='btn' />
+                                 Electronics</label><br></br>
                             </li>
                         </ul>
                         <div class="show-more"><a href="">Show more</a></div>
@@ -178,33 +183,40 @@ function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }) {
                     <div class="middle-filters">
                         <h5>Attribute</h5>
                         <ul>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option">
+                                        <input type="checkbox" name="Option1" class='btn'/>
+                                Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option2">
+                                    <input type="checkbox" class='btn' name="Option2"/>
+                                 Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option3">
+                                    <input type="checkbox" class='btn' name="Option3"/>
+                                 Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option4">
+                                    <input type="checkbox" class='btn' name="Option4"/>
+                                 Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option5">
+                                    <input type="checkbox" class='btn' name="Option5"/>
+                                 Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option6">
+                                    <input type="checkbox" class='btn' name="Option6"/>
+                                 Option</label><br></br>
                                 </li>
-                                <li>
-                                    <input type="checkbox" class='btn'/>
-                                <label for="Option"> Option</label><br></br>
+                            <li>
+                                <label for="Option7">
+                                    <input type="checkbox" class='btn' name="Option7"/>
+                                 Option</label><br></br>
                                 </li>
                         </ul>
                         
