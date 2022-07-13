@@ -1,10 +1,16 @@
-import HandleCart from './HandleCart';
 import {combineReducers} from "redux";
+import { persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-const rootReducers = combineReducers({
+import HandleCart from './HandleCart';
 
-    HandleCart,
+const persistConfig = {
+    key: 'root',
+    storage,
+}
 
-})
+const rootReducers = combineReducers({HandleCart})
 
-export default rootReducers
+const persistedReducer = persistReducer(persistConfig, rootReducers);
+
+export default persistedReducer

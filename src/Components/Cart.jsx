@@ -6,6 +6,7 @@ import '../Styles/add-cart.css'
 const Cart = () => {
 
   const state = useSelector((state) => state.HandleCart);
+
   const dispatch = useDispatch();
 
   const handleDelete = (item) => {

@@ -9,7 +9,12 @@ import Cart from './Components/Cart';
 import './Styles/aemGrid/aem-grid.css';
 import './Styles/common/main.css';
 
+import store from '../src/redux/store'
+
 function App() {
+
+  console.log('store------',store.getState())
+
   return (
     <>
       <Header />
