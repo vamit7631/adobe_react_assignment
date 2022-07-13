@@ -58,7 +58,7 @@ const Products = () => {
                         <div class="product-sorting">
                             <select name="products" id="products" onChange={(e) => SetProductSorting(e)}>
                                 <option value="asc">Sort by Latest</option>
-                                <option value="desc">Sort by Oldest</option>
+                                <option value="desc">Sort by Price</option>
                             </select>
                         </div>
                    
