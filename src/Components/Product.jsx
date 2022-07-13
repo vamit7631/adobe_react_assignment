@@ -66,16 +66,16 @@ const Product = () => {
                     <div class="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--phone--hide">
                         <div>
                             <ul class="item-list">
-                                <li> <img src={product.image} /></li>
-                                <li> <img src={product.image} /></li>
-                                <li> <img src={product.image} /></li>
+                                <li> <img src={product.image} alt="product-img1" /></li>
+                                <li> <img src={product.image} alt="product-img2" /></li>
+                                <li> <img src={product.image} alt="product-img3" /></li>
                             </ul>
                         </div>
                        
                     </div>
                     <div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12">
                         <div class="single-product-img">
-                        <img src={product.image} />
+                        <img src={product.image} alt="product-img" />
                         </div>
                     </div>
                     <div class="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12">
@@ -108,9 +108,9 @@ const Product = () => {
                         <div class="quantity-section">
                             <h4>Quantity</h4>
                             <div class="qnty-input">
-                                <span><img src={'./images/minus-icon.png'} onClick={decNum}  /></span>
+                                <span><img src={'./images/minus-icon.png'} onClick={decNum}  alt="minus-icon" /></span>
                                 <input id="quantity" type="text" name="quantity" value={num} onChange={handleChange} />
-                                <span><img src={'./images/plus-icon.png'} onClick={incNum}/></span>
+                                <span><img src={'./images/plus-icon.png'}  alt="plus-icon" onClick={incNum}/></span>
                             </div>
                        
                         </div>
