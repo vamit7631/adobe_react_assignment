@@ -93,7 +93,7 @@ function ShowProducts(props) {
             <Link to={`/products/${id}`} class='buyNow'>
                 <div class="category-product-outer">
                     <div class="category-product-img">
-                        <img class="product-img" src={image} />
+                        <img class="product-img" alt="product-img" src={image} />
                     </div>
                 
                 <h3 class="category-product-title">{title.substring(0, 18)}...</h3>
