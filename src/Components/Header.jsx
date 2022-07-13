@@ -36,7 +36,7 @@ function Header() {
                 
                 <div class="mobile-nav aem-Grid aem-Grid--12 aem-Grid--default--12 aem-Grid--phone--12">
                         <div class="menu-logo aem-GridColumn aem-GridColumn--default--2"> <img 
-                        src={'./images/menu_icon.png'} /></div>
+                        src={'./images/menu_icon.png'} alt="mobile-menu" /></div>
                         <div class="aem-GridColumn aem-GridColumn--default--6">
                             <div class="venia-logo"> <Link to="/"> <img 
                             src={'./images/venia_logo.png'} alt="logo-img" />
